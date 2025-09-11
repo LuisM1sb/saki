@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-blue: #111827;
+  --color-dark-gray: #1F2937;
+  --color-soft-gold: #D1B06B;
+  --color-dark-green: #065F46;
+  --color-light-gray: #F9FAFB;
+  --color-medium-gray: #6B7280;
+  
+  --font-family-inter: 'Inter', sans-serif;
+}
+
+html {
+  font-family: var(--font-family-inter);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-deep-blue);
+  color: var(--color-light-gray);
+  margin: 0;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: var(--color-soft-gold);
+  color: var(--color-deep-blue);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.btn-primary:hover {
+  background-color: #D97706;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-soft-gold);
+  color: var(--color-soft-gold);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-soft-gold);
+  color: var(--color-deep-blue);
+}
+
+.card {
+  background-color: var(--color-dark-gray);
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.section-padding {
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 4rem 2rem;
+  }
+}
+
+.container-custom {
+  max-width: 80rem;
+  margin: 0 auto;
+}
