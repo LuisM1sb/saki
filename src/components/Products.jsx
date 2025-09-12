@@ -4,8 +4,8 @@ const Products = () => {
   const plans = [
     {
       name: "Plan Despegue",
-      price: "$49",
-      period: "/mes",
+      price: "$119.900",
+      period: "CLP",
       description: "Perfecto para emprendedores que están comenzando su aventura digital",
       features: [
         "Diseño web responsivo",
@@ -20,8 +20,8 @@ const Products = () => {
     },
     {
       name: "Plan Emprende",
-      price: "$99",
-      period: "/mes",
+      price: "$159.900",
+      period: "CLP",
       description: "Ideal para startups en crecimiento que necesitan más funcionalidades",
       features: [
         "Todo lo del Plan Despegue",
@@ -37,8 +37,8 @@ const Products = () => {
     },
     {
       name: "Plan Pyme",
-      price: "$199",
-      period: "/mes",
+      price: "$199.900",
+      period: "CLP",
       description: "Solución completa para empresas establecidas que buscan maximizar su presencia digital",
       features: [
         "Todo lo del Plan Emprende",
@@ -58,7 +58,7 @@ const Products = () => {
     <>
       <Helmet>
         <title>Productos - Saki Lab | Planes de Diseño para Emprendedores</title>
-        <meta name="description" content="Descubre nuestros planes económicos de diseño web, SEO y marketing digital. Plan Despegue $49, Plan Emprende $99, Plan Pyme $199." />
+        <meta name="description" content="Descubre nuestros planes económicos de diseño web, SEO y marketing digital. Plan Despegue $119.900, Plan Emprende $159.900, Plan Pyme $199.900." />
         <meta name="keywords" content="planes económicos, diseño web barato, SEO emprendedores, marketing digital startups, planes diseño" />
       </Helmet>
       <section id="products" className="section-padding bg-deep-blue">
@@ -95,6 +95,7 @@ const Products = () => {
                   <div className="mb-4">
                     <span className="text-4xl font-bold text-soft-gold">{plan.price}</span>
                     <span className="text-medium-gray">{plan.period}</span>
+                    <div className="text-sm text-medium-gray mt-1">IVA incluido</div>
                   </div>
                   <p className="text-medium-gray leading-relaxed">{plan.description}</p>
                 </div>

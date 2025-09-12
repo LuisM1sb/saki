@@ -7,6 +7,9 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [alert, setAlert] = useState({ show: false, type: '', message: '' });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -16,11 +19,40 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const showAlert = (type, message) => {
+    setAlert({ show: true, type, message });
+    setTimeout(() => {
+      setAlert({ show: false, type: '', message: '' });
+    }, 5000);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // En un entorno real, aquí se enviaría el formulario
-    alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        showAlert('success', '¡Mensaje enviado correctamente! Te contactaremos pronto.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        showAlert('error', result.error || 'Error al enviar el mensaje. Inténtalo de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      showAlert('error', 'Error de conexión. Verifica tu internet e inténtalo de nuevo.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -50,6 +82,29 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold text-light-gray mb-6">
                   Envíanos un Mensaje
                 </h3>
+                
+                {/* Alert Messages */}
+                {alert.show && (
+                  <div className={`mb-6 p-4 rounded-lg border ${
+                    alert.type === 'success' 
+                      ? 'bg-green-900/20 border-green-500 text-green-300' 
+                      : 'bg-red-900/20 border-red-500 text-red-300'
+                  }`}>
+                    <div className="flex items-center">
+                      {alert.type === 'success' ? (
+                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      ) : (
+                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                        </svg>
+                      )}
+                      <span className="font-medium">{alert.message}</span>
+                    </div>
+                  </div>
+                )}
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-light-gray font-medium mb-2">
@@ -101,9 +156,24 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="w-full btn-primary text-lg py-4 cursor-pointer"
+                    disabled={isSubmitting}
+                    className={`w-full btn-primary text-lg py-4 transition-all duration-300 ${
+                      isSubmitting 
+                        ? 'opacity-75 cursor-not-allowed' 
+                        : 'cursor-pointer hover:opacity-90'
+                    }`}
                   >
-                    Enviar Mensaje
+                    {isSubmitting ? (
+                      <div className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Enviando...
+                      </div>
+                    ) : (
+                      'Enviar Mensaje'
+                    )}
                   </button>
                 </form>
 
