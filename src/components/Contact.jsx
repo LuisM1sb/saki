@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ const Contact = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [alert, setAlert] = useState({ show: false, type: '', message: '' });
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -26,8 +29,24 @@ const Contact = () => {
     }, 5000);
   };
 
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
+
+  const handleRecaptchaExpired = () => {
+    setRecaptchaToken(null);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validar que el reCaptcha esté completado (solo si está configurado)
+    const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+    if (recaptchaSiteKey && !recaptchaToken) {
+      showAlert('error', 'Por favor, completa la verificación reCaptcha.');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -36,7 +55,10 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken: recaptchaSiteKey ? recaptchaToken : null
+        }),
       });
 
       const result = await response.json();
@@ -44,12 +66,18 @@ const Contact = () => {
       if (response.ok) {
         showAlert('success', '¡Mensaje enviado correctamente! Te contactaremos pronto.');
         setFormData({ name: '', email: '', message: '' });
+        setRecaptchaToken(null);
+        recaptchaRef.current?.reset();
       } else {
         showAlert('error', result.error || 'Error al enviar el mensaje. Inténtalo de nuevo.');
+        setRecaptchaToken(null);
+        recaptchaRef.current?.reset();
       }
     } catch (error) {
       console.error('Error:', error);
       showAlert('error', 'Error de conexión. Verifica tu internet e inténtalo de nuevo.');
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -154,11 +182,24 @@ const Contact = () => {
                     />
                   </div>
 
+                  {/* reCaptcha */}
+                  {import.meta.env.VITE_RECAPTCHA_SITE_KEY && (
+                    <div className="flex justify-center">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                        onChange={handleRecaptchaChange}
+                        onExpired={handleRecaptchaExpired}
+                        theme="dark"
+                      />
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || (import.meta.env.VITE_RECAPTCHA_SITE_KEY && !recaptchaToken)}
                     className={`w-full btn-primary text-lg py-4 transition-all duration-300 ${
-                      isSubmitting 
+                      isSubmitting || (import.meta.env.VITE_RECAPTCHA_SITE_KEY && !recaptchaToken)
                         ? 'opacity-75 cursor-not-allowed' 
                         : 'cursor-pointer hover:opacity-90'
                     }`}

@@ -19,13 +19,40 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, message } = req.body;
+    const { name, email, message, recaptchaToken } = req.body;
 
     // Validar que todos los campos requeridos estén presentes
     if (!name || !email || !message) {
       return res.status(400).json({ 
         error: 'Todos los campos son requeridos' 
       });
+    }
+
+    // Validar reCaptcha (solo si está configurado)
+    if (process.env.RECAPTCHA_SECRET_KEY) {
+      if (!recaptchaToken) {
+        return res.status(400).json({ 
+          error: 'Verificación reCaptcha requerida' 
+        });
+      }
+
+      // Verificar el token de reCaptcha con Google
+      const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+      });
+
+      const recaptchaData = await recaptchaResponse.json();
+
+      if (!recaptchaData.success) {
+        console.error('reCaptcha verification failed:', recaptchaData);
+        return res.status(400).json({ 
+          error: 'Verificación reCaptcha fallida. Por favor, inténtalo de nuevo.' 
+        });
+      }
     }
 
     // Validar formato de email básico
