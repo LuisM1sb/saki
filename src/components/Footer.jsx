@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <>
       <Helmet>
-        <title>Footer - Saki Lab | Enlaces y Redes Sociales</title>
         <meta name="description" content="Conecta con Saki Lab en redes sociales. Síguenos en X (Twitter) y LinkedIn para las últimas actualizaciones." />
       </Helmet>
       <footer className="bg-deep-blue border-t border-gray-700">

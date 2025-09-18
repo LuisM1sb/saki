@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Saki Lab - Estudio de Diseño para Emprendedores</title>
+        <title>Saki Lab - Estudio de Diseño</title>
         <meta name="description" content="Estudio de diseño profesional especializado en emprendedores. Planes económicos para diseño web, SEO y marketing digital." />
         <meta name="keywords" content="diseño emprendedor, planes económicos, startups, diseño web, SEO, marketing digital" />
         <meta property="og:title" content="Saki Lab - Estudio de Diseño para Emprendedores" />

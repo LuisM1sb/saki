@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import { useState } from 'react';
 import logo from '../assets/logo-saki-lab.png';
 
@@ -26,10 +25,6 @@ const Navbar = () => {
   };
   return (
     <>
-      <Helmet>
-        <title>Navegación - Saki Lab</title>
-        <meta name="description" content="Navega por nuestro estudio de diseño profesional para emprendedores" />
-      </Helmet>
       <nav className="fixed top-0 w-full bg-deep-blue/95 backdrop-blur-sm border-b border-gray-700 z-50">
         <div className="container-custom">
           <div className="flex items-center justify-between h-16">

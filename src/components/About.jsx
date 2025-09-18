@@ -1,13 +1,7 @@
-import { Helmet } from 'react-helmet';
 
 const About = () => {
   return (
     <>
-      <Helmet>
-        <title>Quienes Somos - Saki Lab | Estudio de Diseño Profesional</title>
-        <meta name="description" content="Conoce nuestro equipo especializado en diseño para emprendedores. Más de 5 años de experiencia creando soluciones digitales exitosas." />
-        <meta name="keywords" content="estudio diseño, equipo profesional, experiencia emprendedores, diseño web especializado" />
-      </Helmet>
       <section id="about" className="section-padding bg-dark-gray">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">

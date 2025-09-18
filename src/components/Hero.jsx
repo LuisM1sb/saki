@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 
 const Hero = () => {
   return (
     <>
-      <Helmet>
-        <title>Inicio - Saki Lab | Estudio de Diseño para Emprendedores</title>
-        <meta name="description" content="Transformamos ideas en realidad digital. Planes económicos de diseño web, SEO y marketing para emprendedores y startups." />
-        <meta name="keywords" content="diseño emprendedor, planes económicos, startups, diseño web profesional, SEO, marketing digital" />
-      </Helmet>
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">

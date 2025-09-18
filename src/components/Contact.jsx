@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import { Helmet } from 'react-helmet';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
@@ -85,11 +84,6 @@ const Contact = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contacto - Saki Lab | Consulta Gratuita</title>
-        <meta name="description" content="Contacta con nuestro equipo de diseño. Consulta gratuita para emprendedores. Respuesta en menos de 24 horas." />
-        <meta name="keywords" content="contacto diseño web, consulta gratuita, soporte emprendedores, contacto estudio diseño" />
-      </Helmet>
       <section id="contact" className="section-padding bg-dark-gray">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
@@ -292,12 +286,7 @@ const Contact = () => {
                     ></iframe>
                   </div>
                   
-                  <div className="mt-4">
-                    <p className="text-medium-gray text-sm">
-                      <strong className="text-light-gray">Dirección:</strong> Comuna de Providencia, Santiago de Chile<br/>
-                      <strong className="text-light-gray">Servicios:</strong> Disponibles de forma remota para todo Chile
-                    </p>
-                  </div>
+
                 </div>
               </div>
             </div>

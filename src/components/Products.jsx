@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet';
 
 const Products = () => {
   const plans = [
@@ -56,11 +55,6 @@ const Products = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Productos - Saki Lab | Planes de Diseño para Emprendedores</title>
-        <meta name="description" content="Descubre nuestros planes económicos de diseño web, SEO y marketing digital. Plan Despegue $119.900, Plan Emprende $159.900, Plan Pyme $199.900." />
-        <meta name="keywords" content="planes económicos, diseño web barato, SEO emprendedores, marketing digital startups, planes diseño" />
-      </Helmet>
       <section id="products" className="section-padding bg-deep-blue">
         <div className="container-custom">
           <div className="text-center mb-16">
@@ -136,7 +130,20 @@ const Products = () => {
                 perfectamente a tus necesidades.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="btn-primary transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-soft-gold/30 cursor-pointer">
+                <button 
+                  onClick={() => {
+                    const element = document.getElementById('contact');
+                    if (element) {
+                      const navbarHeight = 64; // 4rem = 64px (h-16)
+                      const elementPosition = element.offsetTop - navbarHeight;
+                      window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                      });
+                    }
+                  }}
+                  className="btn-primary transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-soft-gold/30 cursor-pointer"
+                >
                   Consulta Gratuita
                 </button>
                 <button className="btn-secondary transition-all duration-300 transform hover:scale-105 active:scale-95 hover:shadow-lg hover:shadow-soft-gold/20 cursor-pointer">
