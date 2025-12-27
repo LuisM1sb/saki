@@ -92,6 +92,9 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold text-light-gray mb-4">Servicios</h3>
                 <ul className="space-y-3">
                   <li>
+                    <span className="text-medium-gray">Proyectos Cloud AWS</span>
+                  </li>
+                  <li>
                     <span className="text-medium-gray">Diseño Web</span>
                   </li>
                   <li>
