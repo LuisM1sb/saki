@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Products from './components/Products';
+import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Analytics } from "@vercel/analytics/react"
@@ -31,7 +31,7 @@ function App() {
             <>
               <Hero />
               <About />
-              <Products />
+              <Services />
               <Contact />
             </>
           } />

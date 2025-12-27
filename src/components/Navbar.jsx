@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import logo from '../assets/logo-saki-lab.png';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,11 +29,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <img 
-                src={logo} 
-                alt="Saki Lab Logo" 
-                className="h-8 w-auto"
-              />
+              <div className="w-8 h-8 bg-soft-gold rounded-lg flex items-center justify-center">
+                <span className="text-deep-blue font-bold text-lg">S</span>
+              </div>
               <span className="text-xl font-bold text-light-gray">Saki Lab</span>
             </Link>
 
@@ -54,11 +51,11 @@ const Navbar = () => {
                 Quienes Somos
               </a>
               <a 
-                href="#products" 
-                onClick={(e) => handleSmoothScroll(e, 'products')}
+                href="#services" 
+                onClick={(e) => handleSmoothScroll(e, 'services')}
                 className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer"
               >
-                Productos
+                Servicios
               </a>
               <a 
                 href="#contact" 
@@ -109,11 +106,11 @@ const Navbar = () => {
                   Quienes Somos
                 </a>
                 <a 
-                  href="#products" 
-                  onClick={(e) => handleSmoothScroll(e, 'products')}
+                  href="#services" 
+                  onClick={(e) => handleSmoothScroll(e, 'services')}
                   className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer py-2"
                 >
-                  Productos
+                  Servicios
                 </a>
                 <a 
                   href="#contact" 

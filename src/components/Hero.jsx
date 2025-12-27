@@ -38,10 +38,10 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <a 
-                href="#products" 
+                href="#services" 
                 onClick={(e) => {
                   e.preventDefault();
-                  const element = document.getElementById('products');
+                  const element = document.getElementById('services');
                   if (element) {
                     const navbarHeight = 64; // 4rem = 64px (h-16)
                     const elementPosition = element.offsetTop - navbarHeight;
@@ -53,7 +53,7 @@ const Hero = () => {
                 }}
                 className="btn-primary text-lg px-8 py-4 cursor-pointer"
               >
-                Ver Planes
+                Ver Servicios
               </a>
               <a 
                 href="#contact" 
@@ -73,22 +73,6 @@ const Hero = () => {
               >
                 Consulta Gratuita
               </a>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-soft-gold mb-2">50+</div>
-                <div className="text-medium-gray">Proyectos Completados</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-soft-gold mb-2">98%</div>
-                <div className="text-medium-gray">Satisfacción Cliente</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-soft-gold mb-2">24/7</div>
-                <div className="text-medium-gray">Soporte Técnico</div>
-              </div>
             </div>
           </div>
         </div>
