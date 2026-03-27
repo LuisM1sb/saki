@@ -33,3 +33,8 @@ env.example
 #MD Files
 CONTACT_SETUP.md
 RECAPTCHA_SETUP.md
+
+# Claude
+INFORME.md
+.claude/
+CLAUDE.md
