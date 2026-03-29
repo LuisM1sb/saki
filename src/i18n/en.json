@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Built for Entrepreneurs",
+    "titleLine1": "We Turn",
+    "titleLine2": "Ideas into Reality",
+    "titleAccent": "Digital",
+    "description": "Professional web design, SEO, and digital marketing at plans built for entrepreneurs and startups ready to make their mark online.",
+    "ctaServices": "Our Services",
+    "ctaConsult": "Free Consultation"
+  },
+  "about": {
+    "heading": "About Us",
+    "tagline": "Turning business visions into exceptional digital experiences",
+    "missionTitle": "Our Mission",
+    "missionP1": "At Saki Lab, we believe every entrepreneur deserves access to high-quality professional design — without breaking the bank. Our team blends creativity, technology, and strategy to build digital experiences that drive real business growth.",
+    "missionP2": "With over 5 years in the market, we've helped more than 50 entrepreneurs and startups establish their digital presence and hit their business goals.",
+    "tag1": "Responsive Design",
+    "tag2": "SEO Optimized",
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "We leverage the latest technologies and trends to deliver modern, efficient solutions that keep you ahead of the curve."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Every project gets hands-on attention and is delivered to the highest standards — no shortcuts, no templates."
+      },
+      "accessibility": {
+        "title": "Affordability",
+        "description": "Flexible plans designed so any entrepreneur or small business can access professional-grade services."
+      }
+    }
+  },
+  "services": {
+    "heading": "Our Services",
+    "subheading": "End-to-end technology solutions built to grow your business — from web development to cloud infrastructure, we've got you covered at every step.",
+    "cta": "Get a Quote",
+    "customTitle": "Need a tailored solution?",
+    "customDesc": "Every project is different. We work alongside you to craft technology solutions that fit your business perfectly — no one-size-fits-all packages.",
+    "ctaFree": "Free Consultation",
+    "ctaLearn": "Learn More",
+    "items": {
+      "webDev": {
+        "name": "Web Development",
+        "description": "We build modern, responsive, high-performance websites that stand out in the digital marketplace — from landing pages to full-scale web applications.",
+        "features": [
+          "Modern responsive design",
+          "Built-in SEO optimization",
+          "Performance-first architecture",
+          "Seamless third-party integrations"
+        ]
+      },
+      "cloud": {
+        "name": "AWS Cloud Projects",
+        "description": "We deploy scalable cloud solutions on Amazon Web Services — covering architecture design, migration, and ongoing infrastructure optimization.",
+        "features": [
+          "Scalable cloud architecture",
+          "AWS migration services",
+          "Cost optimization",
+          "Security & compliance"
+        ]
+      },
+      "consulting": {
+        "name": "IT Consulting",
+        "description": "Strategic technology advisory to streamline your processes, boost efficiency, and make confident decisions about your digital infrastructure.",
+        "features": [
+          "Infrastructure assessment",
+          "Technology strategy",
+          "Process optimization",
+          "Implementation roadmap"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "subheading": "Ready to bring your idea to life? Reach out for a free consultation and let's talk about how we can help your business grow.",
+    "formTitle": "Send Us a Message",
+    "nameLabel": "Full Name *",
+    "namePlaceholder": "Your full name",
+    "emailLabel": "Email Address *",
+    "emailPlaceholder": "you@email.com",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Tell us about your project and how we can help...",
+    "recaptchaError": "Please complete the reCaptcha verification.",
+    "successMessage": "Message sent successfully! We'll be in touch soon.",
+    "errorMessage": "Failed to send message. Please try again.",
+    "connectionError": "Connection error. Please check your internet and try again.",
+    "submitting": "Sending...",
+    "submitButton": "Send Message",
+    "requiredNote": "* Required fields. We'll respond within 24 hours.",
+    "infoTitle": "Contact Information",
+    "emailHeading": "Email",
+    "emailValue": "info@sakilab.cl",
+    "hoursHeading": "Business Hours",
+    "hoursValue": "Monday – Friday: 9:00 AM – 6:00 PM (CLT)",
+    "locationHeading": "Location",
+    "locationValue": "Providencia, Santiago, Chile",
+    "remoteNote": "Remote services available worldwide",
+    "mapTitle": "Our Location"
+  },
+  "footer": {
+    "description": "Design studio specialized in entrepreneurs and startups. We transform ideas into exceptional digital experiences with affordable plans and professional support.",
+    "quickLinksTitle": "Quick Links",
+    "servicesTitle": "Services",
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "serviceLinks": {
+      "cloud": "AWS Cloud Projects",
+      "webDesign": "Web Design",
+      "seo": "SEO & Marketing",
+      "ecommerce": "E-commerce",
+      "consulting": "Consulting"
+    },
+    "copyright": "© 2026 Saki Lab. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookies"
+  },
+  "whatsapp": {
+    "ariaLabel": "Contact us on WhatsApp",
+    "message": "Hello%2C%20I%20visited%20sakilab.cl%20and%20I%27m%20interested%20in%20getting%20a%20quote"
+  }
+}

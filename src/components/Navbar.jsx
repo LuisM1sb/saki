@@ -1,27 +1,30 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {
-      const navbarHeight = 64; // 4rem = 64px (h-16)
+      const navbarHeight = 64;
       const elementPosition = element.offsetTop - navbarHeight;
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
       });
     }
-    // Close mobile menu after clicking a link
     setIsMobileMenuOpen(false);
   };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
   return (
     <>
       <nav className="fixed top-0 w-full bg-deep-blue/95 backdrop-blur-sm border-b border-gray-700 z-50">
@@ -37,38 +40,40 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer"
               >
-                Inicio
+                {t('nav.home')}
               </Link>
-              <a 
-                href="#about" 
+              <a
+                href="#about"
                 onClick={(e) => handleSmoothScroll(e, 'about')}
                 className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer"
               >
-                Quienes Somos
+                {t('nav.about')}
               </a>
-              <a 
-                href="#services" 
+              <a
+                href="#services"
                 onClick={(e) => handleSmoothScroll(e, 'services')}
                 className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer"
               >
-                Servicios
+                {t('nav.services')}
               </a>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 onClick={(e) => handleSmoothScroll(e, 'contact')}
                 className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer"
               >
-                Contacto
+                {t('nav.contact')}
               </a>
+              <LanguageSwitcher />
             </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button 
+            {/* Mobile: language switcher + hamburger */}
+            <div className="md:hidden flex items-center gap-2">
+              <LanguageSwitcher />
+              <button
                 onClick={toggleMobileMenu}
                 className="text-light-gray hover:text-soft-gold transition-colors duration-300 cursor-pointer"
               >
@@ -91,33 +96,33 @@ const Navbar = () => {
           <div className="md:hidden bg-deep-blue/95 backdrop-blur-sm border-b border-gray-700">
             <div className="container-custom py-4">
               <div className="flex flex-col space-y-4">
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer py-2"
                 >
-                  Inicio
+                  {t('nav.home')}
                 </Link>
-                <a 
-                  href="#about" 
+                <a
+                  href="#about"
                   onClick={(e) => handleSmoothScroll(e, 'about')}
                   className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer py-2"
                 >
-                  Quienes Somos
+                  {t('nav.about')}
                 </a>
-                <a 
-                  href="#services" 
+                <a
+                  href="#services"
                   onClick={(e) => handleSmoothScroll(e, 'services')}
                   className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer py-2"
                 >
-                  Servicios
+                  {t('nav.services')}
                 </a>
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   onClick={(e) => handleSmoothScroll(e, 'contact')}
                   className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer py-2"
                 >
-                  Contacto
+                  {t('nav.contact')}
                 </a>
               </div>
             </div>

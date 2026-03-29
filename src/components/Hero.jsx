@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero">
@@ -16,62 +19,54 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-soft-gold/10 border border-soft-gold/20 text-soft-gold text-sm font-medium mb-8">
               <span className="w-2 h-2 bg-soft-gold rounded-full mr-2"></span>
-              Especialistas en Emprendedores
+              {t('hero.badge')}
             </div>
 
             {/* Main Heading */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-light-gray mb-6 leading-tight">
-              Transformamos
-              <span className="block text-soft-gold">Ideas en Realidad</span>
+              {t('hero.titleLine1')}
+              <span className="block text-soft-gold">{t('hero.titleLine2')}</span>
               <span className="block text-2xl md:text-3xl lg:text-4xl font-normal text-medium-gray mt-4">
-                Digital
+                {t('hero.titleAccent')}
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-medium-gray mb-8 max-w-2xl mx-auto leading-relaxed">
-              Diseño web profesional, SEO y marketing digital con planes económicos 
-              diseñados específicamente para emprendedores y startups que buscan 
-              destacar en el mercado digital.
+              {t('hero.description')}
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <a 
-                href="#services" 
+              <a
+                href="#services"
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById('services');
                   if (element) {
-                    const navbarHeight = 64; // 4rem = 64px (h-16)
+                    const navbarHeight = 64;
                     const elementPosition = element.offsetTop - navbarHeight;
-                    window.scrollTo({
-                      top: elementPosition,
-                      behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: elementPosition, behavior: 'smooth' });
                   }
                 }}
                 className="btn-primary text-lg px-8 py-4 cursor-pointer"
               >
-                Ver Servicios
+                {t('hero.ctaServices')}
               </a>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 onClick={(e) => {
                   e.preventDefault();
                   const element = document.getElementById('contact');
                   if (element) {
-                    const navbarHeight = 64; // 4rem = 64px (h-16)
+                    const navbarHeight = 64;
                     const elementPosition = element.offsetTop - navbarHeight;
-                    window.scrollTo({
-                      top: elementPosition,
-                      behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: elementPosition, behavior: 'smooth' });
                   }
                 }}
                 className="btn-secondary text-lg px-8 py-4 cursor-pointer"
               >
-                Consulta Gratuita
+                {t('hero.ctaConsult')}
               </a>
             </div>
           </div>

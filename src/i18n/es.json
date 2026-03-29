@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Quienes Somos",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Especialistas en Emprendedores",
+    "titleLine1": "Transformamos",
+    "titleLine2": "Ideas en Realidad",
+    "titleAccent": "Digital",
+    "description": "Diseño web profesional, SEO y marketing digital con planes económicos diseñados específicamente para emprendedores y startups que buscan destacar en el mercado digital.",
+    "ctaServices": "Ver Servicios",
+    "ctaConsult": "Consulta Gratuita"
+  },
+  "about": {
+    "heading": "Quienes Somos",
+    "tagline": "Especialistas en transformar visiones empresariales en experiencias digitales excepcionales",
+    "missionTitle": "Nuestra Misión",
+    "missionP1": "En Saki Lab, creemos que cada emprendedor merece tener acceso a soluciones de diseño profesional de alta calidad, sin comprometer su presupuesto. Nuestro equipo combina creatividad, tecnología y estrategia para crear experiencias digitales que impulsan el crecimiento de tu negocio.",
+    "missionP2": "Con más de 5 años de experiencia en el mercado, hemos ayudado a más de 50 emprendedores y startups a establecer su presencia digital y alcanzar sus objetivos comerciales.",
+    "tag1": "Diseño Responsivo",
+    "tag2": "SEO Optimizado",
+    "values": {
+      "innovation": {
+        "title": "Innovación",
+        "description": "Utilizamos las últimas tecnologías y tendencias para crear soluciones modernas y eficientes."
+      },
+      "quality": {
+        "title": "Calidad",
+        "description": "Cada proyecto recibe atención personalizada y es entregado con los más altos estándares de calidad."
+      },
+      "accessibility": {
+        "title": "Accesibilidad",
+        "description": "Planes económicos diseñados para que cualquier emprendedor pueda acceder a servicios profesionales."
+      }
+    }
+  },
+  "services": {
+    "heading": "Nuestros Servicios",
+    "subheading": "Soluciones tecnológicas integrales diseñadas para impulsar tu negocio. Desde desarrollo web hasta infraestructura cloud, te acompañamos en cada paso.",
+    "cta": "Consultar Servicio",
+    "customTitle": "¿Necesitas una solución personalizada?",
+    "customDesc": "Cada proyecto es único. Trabajamos contigo para crear soluciones tecnológicas que se adapten perfectamente a las necesidades específicas de tu negocio.",
+    "ctaFree": "Consulta Gratuita",
+    "ctaLearn": "Conoce Más",
+    "items": {
+      "webDev": {
+        "name": "Desarrollo Web",
+        "description": "Creamos sitios web modernos, responsivos y optimizados que destacan en el mercado digital. Desde landing pages hasta aplicaciones web complejas.",
+        "features": [
+          "Diseño responsivo y moderno",
+          "Optimización SEO integrada",
+          "Rendimiento optimizado",
+          "Integración con sistemas existentes"
+        ]
+      },
+      "cloud": {
+        "name": "Proyectos Cloud AWS",
+        "description": "Implementamos soluciones escalables en la nube con Amazon Web Services. Arquitectura, migración y optimización de infraestructura cloud.",
+        "features": [
+          "Arquitectura cloud escalable",
+          "Migración a AWS",
+          "Optimización de costos",
+          "Seguridad y compliance"
+        ]
+      },
+      "consulting": {
+        "name": "Consultoría TI",
+        "description": "Asesoría estratégica en tecnología para optimizar tus procesos, mejorar la eficiencia y tomar decisiones informadas sobre tu infraestructura digital.",
+        "features": [
+          "Análisis de infraestructura",
+          "Estrategia tecnológica",
+          "Optimización de procesos",
+          "Roadmap de implementación"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contacto",
+    "subheading": "¿Listo para transformar tu idea en realidad digital? Contáctanos para una consulta gratuita y descubre cómo podemos ayudarte a hacer crecer tu negocio.",
+    "formTitle": "Envíanos un Mensaje",
+    "nameLabel": "Nombre Completo *",
+    "namePlaceholder": "Tu nombre completo",
+    "emailLabel": "Correo Electrónico *",
+    "emailPlaceholder": "tu@email.com",
+    "messageLabel": "Mensaje *",
+    "messagePlaceholder": "Cuéntanos sobre tu proyecto y cómo podemos ayudarte...",
+    "recaptchaError": "Por favor, completa la verificación reCaptcha.",
+    "successMessage": "¡Mensaje enviado correctamente! Te contactaremos pronto.",
+    "errorMessage": "Error al enviar el mensaje. Inténtalo de nuevo.",
+    "connectionError": "Error de conexión. Verifica tu internet e inténtalo de nuevo.",
+    "submitting": "Enviando...",
+    "submitButton": "Enviar Mensaje",
+    "requiredNote": "* Campos obligatorios. Te responderemos en menos de 24 horas.",
+    "infoTitle": "Información de Contacto",
+    "emailHeading": "Email",
+    "emailValue": "info@sakilab.cl",
+    "hoursHeading": "Horarios",
+    "hoursValue": "Lunes - Viernes: 9:00 - 18:00",
+    "locationHeading": "Ubicación",
+    "locationValue": "Comuna de Providencia, Santiago de Chile",
+    "remoteNote": "Servicios remotos disponibles",
+    "mapTitle": "Nuestra Ubicación"
+  },
+  "footer": {
+    "description": "Estudio de diseño especializado en emprendedores y startups. Transformamos ideas en experiencias digitales excepcionales con planes económicos y soporte profesional.",
+    "quickLinksTitle": "Enlaces Rápidos",
+    "servicesTitle": "Servicios",
+    "links": {
+      "home": "Inicio",
+      "about": "Quienes Somos",
+      "services": "Servicios",
+      "contact": "Contacto"
+    },
+    "serviceLinks": {
+      "cloud": "Proyectos Cloud AWS",
+      "webDesign": "Diseño Web",
+      "seo": "SEO & Marketing",
+      "ecommerce": "E-commerce",
+      "consulting": "Consultoría"
+    },
+    "copyright": "© 2026 Saki Lab. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "cookies": "Cookies"
+  },
+  "whatsapp": {
+    "ariaLabel": "Contactar por WhatsApp",
+    "message": "Hola%2C%20vi%20tu%20sitio%20sakilab.cl%20y%20me%20interesa%20cotizar"
+  }
+}

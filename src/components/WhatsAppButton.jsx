@@ -1,7 +1,10 @@
-const WA_URL =
-  'https://wa.me/56942555908?text=Hola%2C%20vi%20tu%20sitio%20sakilab.cl%20y%20me%20interesa%20cotizar';
+import { useTranslation } from 'react-i18next';
+
+const WA_BASE = 'https://wa.me/56942555908?text=';
 
 export default function WhatsAppButton() {
+  const { t } = useTranslation();
+
   return (
     <>
       <style>{`
@@ -18,10 +21,10 @@ export default function WhatsAppButton() {
       `}</style>
 
       <a
-        href={WA_URL}
+        href={`${WA_BASE}${t('whatsapp.message')}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Contactar por WhatsApp"
+        aria-label={t('whatsapp.ariaLabel')}
         className="wa-btn"
         style={{
           position: 'fixed',

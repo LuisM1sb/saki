@@ -1,5 +1,8 @@
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section id="about" className="section-padding bg-dark-gray">
@@ -8,11 +11,11 @@ const About = () => {
             {/* Section Header */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-light-gray mb-6">
-                Quienes Somos
+                {t('about.heading')}
               </h2>
               <div className="w-24 h-1 bg-soft-gold mx-auto mb-8"></div>
               <p className="text-lg text-medium-gray leading-relaxed">
-                Especialistas en transformar visiones empresariales en experiencias digitales excepcionales
+                {t('about.tagline')}
               </p>
             </div>
 
@@ -21,31 +24,26 @@ const About = () => {
               {/* Text Content */}
               <div className="text-left">
                 <h3 className="text-2xl font-bold text-light-gray mb-6">
-                  Nuestra Misión
+                  {t('about.missionTitle')}
                 </h3>
                 <p className="text-medium-gray mb-6 leading-relaxed">
-                  En Saki Lab, creemos que cada emprendedor merece tener acceso a soluciones 
-                  de diseño profesional de alta calidad, sin comprometer su presupuesto. 
-                  Nuestro equipo combina creatividad, tecnología y estrategia para crear 
-                  experiencias digitales que impulsan el crecimiento de tu negocio.
+                  {t('about.missionP1')}
                 </p>
                 <p className="text-medium-gray mb-6 leading-relaxed">
-                  Con más de 5 años de experiencia en el mercado, hemos ayudado a más de 
-                  50 emprendedores y startups a establecer su presencia digital y alcanzar 
-                  sus objetivos comerciales.
+                  {t('about.missionP2')}
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center text-soft-gold">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-light-gray">Diseño Responsivo</span>
+                    <span className="text-light-gray">{t('about.tag1')}</span>
                   </div>
                   <div className="flex items-center text-soft-gold">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-light-gray">SEO Optimizado</span>
+                    <span className="text-light-gray">{t('about.tag2')}</span>
                   </div>
                 </div>
               </div>
@@ -87,10 +85,8 @@ const About = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h4 className="text-xl font-semibold text-light-gray mb-3">Innovación</h4>
-                <p className="text-medium-gray">
-                  Utilizamos las últimas tecnologías y tendencias para crear soluciones modernas y eficientes.
-                </p>
+                <h4 className="text-xl font-semibold text-light-gray mb-3">{t('about.values.innovation.title')}</h4>
+                <p className="text-medium-gray">{t('about.values.innovation.description')}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-soft-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -98,10 +94,8 @@ const About = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h4 className="text-xl font-semibold text-light-gray mb-3">Calidad</h4>
-                <p className="text-medium-gray">
-                  Cada proyecto recibe atención personalizada y es entregado con los más altos estándares de calidad.
-                </p>
+                <h4 className="text-xl font-semibold text-light-gray mb-3">{t('about.values.quality.title')}</h4>
+                <p className="text-medium-gray">{t('about.values.quality.description')}</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-soft-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -109,10 +103,8 @@ const About = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 </div>
-                <h4 className="text-xl font-semibold text-light-gray mb-3">Accesibilidad</h4>
-                <p className="text-medium-gray">
-                  Planes económicos diseñados para que cualquier emprendedor pueda acceder a servicios profesionales.
-                </p>
+                <h4 className="text-xl font-semibold text-light-gray mb-3">{t('about.values.accessibility.title')}</h4>
+                <p className="text-medium-gray">{t('about.values.accessibility.description')}</p>
               </div>
             </div>
           </div>

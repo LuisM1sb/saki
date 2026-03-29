@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <footer className="bg-deep-blue border-t border-gray-700">
@@ -16,9 +19,7 @@ const Footer = () => {
                   <span className="text-xl font-bold text-light-gray">Saki Lab</span>
                 </Link>
                 <p className="text-medium-gray mb-6 max-w-md leading-relaxed">
-                  Estudio de diseño especializado en emprendedores y startups.
-                  Transformamos ideas en experiencias digitales excepcionales con
-                  planes económicos y soporte profesional.
+                  {t('footer.description')}
                 </p>
                 <div className="flex space-x-4">
                   <a
@@ -46,38 +47,26 @@ const Footer = () => {
 
               {/* Quick Links */}
               <div>
-                <h3 className="text-lg font-semibold text-light-gray mb-4">Enlaces Rápidos</h3>
+                <h3 className="text-lg font-semibold text-light-gray mb-4">{t('footer.quickLinksTitle')}</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link
-                      to="/"
-                      className="text-medium-gray hover:text-soft-gold transition-colors duration-300"
-                    >
-                      Inicio
+                    <Link to="/" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
+                      {t('footer.links.home')}
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/#about"
-                      className="text-medium-gray hover:text-soft-gold transition-colors duration-300"
-                    >
-                      Quienes Somos
+                    <Link to="/#about" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
+                      {t('footer.links.about')}
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/#services"
-                      className="text-medium-gray hover:text-soft-gold transition-colors duration-300"
-                    >
-                      Servicios
+                    <Link to="/#services" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
+                      {t('footer.links.services')}
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/#contact"
-                      className="text-medium-gray hover:text-soft-gold transition-colors duration-300"
-                    >
-                      Contacto
+                    <Link to="/#contact" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
+                      {t('footer.links.contact')}
                     </Link>
                   </li>
                 </ul>
@@ -85,23 +74,13 @@ const Footer = () => {
 
               {/* Services */}
               <div>
-                <h3 className="text-lg font-semibold text-light-gray mb-4">Servicios</h3>
+                <h3 className="text-lg font-semibold text-light-gray mb-4">{t('footer.servicesTitle')}</h3>
                 <ul className="space-y-3">
-                  <li>
-                    <span className="text-medium-gray">Proyectos Cloud AWS</span>
-                  </li>
-                  <li>
-                    <span className="text-medium-gray">Diseño Web</span>
-                  </li>
-                  <li>
-                    <span className="text-medium-gray">SEO & Marketing</span>
-                  </li>
-                  <li>
-                    <span className="text-medium-gray">E-commerce</span>
-                  </li>
-                  <li>
-                    <span className="text-medium-gray">Consultoría</span>
-                  </li>
+                  <li><span className="text-medium-gray">{t('footer.serviceLinks.cloud')}</span></li>
+                  <li><span className="text-medium-gray">{t('footer.serviceLinks.webDesign')}</span></li>
+                  <li><span className="text-medium-gray">{t('footer.serviceLinks.seo')}</span></li>
+                  <li><span className="text-medium-gray">{t('footer.serviceLinks.ecommerce')}</span></li>
+                  <li><span className="text-medium-gray">{t('footer.serviceLinks.consulting')}</span></li>
                 </ul>
               </div>
             </div>
@@ -111,17 +90,17 @@ const Footer = () => {
           <div className="border-t border-gray-700 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-medium-gray text-sm mb-4 md:mb-0">
-                © 2026 Saki Lab. Todos los derechos reservados.
+                {t('footer.copyright')}
               </div>
               <div className="flex space-x-6 text-sm">
                 <a href="#" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
-                  Política de Privacidad
+                  {t('footer.privacy')}
                 </a>
                 <a href="#" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
-                  Términos de Servicio
+                  {t('footer.terms')}
                 </a>
                 <a href="#" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
-                  Cookies
+                  {t('footer.cookies')}
                 </a>
               </div>
             </div>
