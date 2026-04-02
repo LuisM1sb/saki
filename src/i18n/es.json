@@ -131,14 +131,16 @@
     "mapTitle": "Nuestra Ubicación"
   },
   "footer": {
-    "description": "Estudio de diseño especializado en emprendedores y startups. Transformamos ideas en experiencias digitales excepcionales con planes económicos y soporte profesional.",
+    "description": "Desarrollo web profesional en React, WordPress y Node.js. Sitios a medida, mantención WordPress y asesoría IT para empresas y emprendedores en Chile.",
     "quickLinksTitle": "Enlaces Rápidos",
     "servicesTitle": "Servicios",
     "links": {
       "home": "Inicio",
       "about": "Quienes Somos",
       "services": "Servicios",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "blog": "Blog",
+      "portfolio": "Portafolio"
     },
     "serviceLinks": {
       "cloud": "Proyectos Cloud AWS",

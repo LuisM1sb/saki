@@ -131,14 +131,16 @@
     "mapTitle": "Our Location"
   },
   "footer": {
-    "description": "Design studio specialized in entrepreneurs and startups. We transform ideas into exceptional digital experiences with affordable plans and professional support.",
+    "description": "Professional web development in React, WordPress and Node.js. Custom websites, WordPress maintenance and IT consulting for businesses and entrepreneurs.",
     "quickLinksTitle": "Quick Links",
     "servicesTitle": "Services",
     "links": {
       "home": "Home",
       "about": "About Us",
       "services": "Services",
-      "contact": "Contact"
+      "contact": "Contact",
+      "blog": "Blog",
+      "portfolio": "Portfolio"
     },
     "serviceLinks": {
       "cloud": "AWS Cloud Projects",

@@ -69,6 +69,16 @@ const Footer = () => {
                       {t('footer.links.contact')}
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/blog" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
+                      {t('footer.links.blog')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/portfolio" className="text-medium-gray hover:text-soft-gold transition-colors duration-300">
+                      {t('footer.links.portfolio')}
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
