@@ -1,4 +1,10 @@
 {
+  "meta": {
+    "title": "Saki Lab - Professional Web Development | React, WordPress & Node.js",
+    "description": "Professional web development in React, WordPress and Node.js. Custom websites, WordPress maintenance and IT consulting for businesses and entrepreneurs.",
+    "ogTitle": "Saki Lab - Professional Web Development | React, WordPress & Node.js",
+    "ogDescription": "Professional web development in React, WordPress and Node.js. Custom websites, WordPress maintenance and IT consulting for businesses and entrepreneurs."
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",

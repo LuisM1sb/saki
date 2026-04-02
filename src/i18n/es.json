@@ -1,4 +1,10 @@
 {
+  "meta": {
+    "title": "Saki Lab - Desarrollo Web Profesional | React, WordPress & Node.js",
+    "description": "Desarrollo web profesional en React, WordPress y Node.js. Sitios a medida, mantención WordPress y asesoría IT para empresas y emprendedores en Chile.",
+    "ogTitle": "Saki Lab - Desarrollo Web Profesional | React, WordPress & Node.js",
+    "ogDescription": "Desarrollo web profesional en React, WordPress y Node.js. Sitios a medida, mantención WordPress y asesoría IT para empresas y emprendedores en Chile."
+  },
   "nav": {
     "home": "Inicio",
     "about": "Quienes Somos",

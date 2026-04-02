@@ -1,6 +1,7 @@
 import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, useLocation } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import ReactGA from 'react-ga4'
 import './i18n/config.js'
 import './index.css'
@@ -23,9 +24,11 @@ function PageTracker() {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <PageTracker />
-      <App />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <PageTracker />
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>,
 )
