@@ -10,7 +10,17 @@
     "about": "Quienes Somos",
     "services": "Servicios",
     "contact": "Contacto",
-    "blog": "Blog"
+    "blog": "Blog",
+    "portfolio": "Portafolio"
+  },
+  "portfolio": {
+    "metaTitle": "Portafolio — Saki Lab | Proyectos Web",
+    "metaDescription": "Proyectos de desarrollo web realizados por Saki Lab: sitios React, WordPress, SEO y más.",
+    "heading": "Portafolio",
+    "subheading": "Proyectos reales que hemos construido para emprendedores y empresas.",
+    "backToPortfolio": "Volver al portafolio",
+    "visitSite": "Ver sitio",
+    "empty": "Próximamente publicaremos proyectos."
   },
   "blog": {
     "metaTitle": "Blog — Saki Lab | Tips de Desarrollo Web y SEO",

@@ -19,7 +19,8 @@ function formatDate(dateStr, locale) {
 const BlogPost = () => {
   const { slug } = useParams();
   const { t, i18n } = useTranslation();
-  const post = getPostBySlug(slug);
+  const lang = i18n.language === 'en' ? 'en' : 'es';
+  const post = getPostBySlug(slug, lang);
 
   if (!post) return <Navigate to="/blog" replace />;
 
@@ -55,7 +56,7 @@ const BlogPost = () => {
 
             <div className="flex flex-wrap items-center gap-3">
               <time dateTime={post.date} className="text-sm text-medium-gray">
-                {formatDate(post.date, i18n.language)}
+                {formatDate(post.date, lang)}
               </time>
               <span className="text-gray-600">•</span>
               <div className="flex flex-wrap gap-2">

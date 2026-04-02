@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { getAllPosts } from '../utils/posts';
 
-const posts = getAllPosts();
-
 function formatDate(dateStr, locale) {
   const date = new Date(dateStr + 'T00:00:00');
   return date.toLocaleDateString(locale === 'es' ? 'es-CL' : 'en-US', {
@@ -16,6 +14,8 @@ function formatDate(dateStr, locale) {
 
 const Blog = () => {
   const { t, i18n } = useTranslation();
+  const lang = i18n.language === 'en' ? 'en' : 'es';
+  const posts = getAllPosts(lang);
 
   return (
     <>
@@ -77,7 +77,7 @@ const Blog = () => {
                     dateTime={post.date}
                     className="text-xs text-medium-gray border-t border-gray-700 pt-3 mt-auto"
                   >
-                    {formatDate(post.date, i18n.language)}
+                    {formatDate(post.date, lang)}
                   </time>
                 </Link>
               ))}
