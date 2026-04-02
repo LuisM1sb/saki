@@ -29,9 +29,6 @@ const About = () => {
                 <p className="text-medium-gray mb-6 leading-relaxed">
                   {t('about.missionP1')}
                 </p>
-                <p className="text-medium-gray mb-6 leading-relaxed">
-                  {t('about.missionP2')}
-                </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center text-soft-gold">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
