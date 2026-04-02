@@ -9,7 +9,16 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "blog": {
+    "metaTitle": "Blog — Saki Lab | Web Development & SEO Tips",
+    "metaDescription": "Articles on web development, WordPress, SEO, and technology for entrepreneurs.",
+    "heading": "Blog",
+    "subheading": "Practical tips on web development, SEO, and technology for entrepreneurs.",
+    "backToBlog": "Back to blog",
+    "empty": "Articles coming soon."
   },
   "hero": {
     "badge": "Built for Entrepreneurs",

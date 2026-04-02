@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -73,6 +74,12 @@ const Navbar = () => {
               >
                 {t('nav.contact')}
               </a>
+              <Link
+                to="/blog"
+                className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer"
+              >
+                {t('nav.blog')}
+              </Link>
               <LanguageSwitcher />
             </div>
 
@@ -130,6 +137,13 @@ const Navbar = () => {
                 >
                   {t('nav.contact')}
                 </a>
+                <Link
+                  to="/blog"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-light-gray hover:text-soft-gold transition-colors duration-300 font-medium cursor-pointer py-2"
+                >
+                  {t('nav.blog')}
+                </Link>
               </div>
             </div>
           </div>

@@ -8,6 +8,8 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
               <Contact />
             </>
           } />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
         
         <Footer />
