@@ -31,13 +31,13 @@
     "empty": "Articles coming soon."
   },
   "hero": {
-    "badge": "Built for Entrepreneurs",
-    "titleLine1": "We Turn",
-    "titleLine2": "Ideas into Reality",
+    "badge": "Professional Web Development",
+    "titleLine1": "We build websites",
+    "titleLine2": "that drive results",
     "titleAccent": "Digital",
-    "description": "Professional web design, SEO, and digital marketing at plans built for entrepreneurs and startups ready to make their mark online.",
-    "ctaServices": "Our Services",
-    "ctaConsult": "Free Consultation"
+    "description": "Web development in React and WordPress, technical maintenance and IT consulting for businesses and entrepreneurs who need a serious digital presence.",
+    "ctaServices": "View Services",
+    "ctaConsult": "Get a Quote"
   },
   "about": {
     "heading": "About Us",

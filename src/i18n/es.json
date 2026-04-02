@@ -31,13 +31,13 @@
     "empty": "Próximamente publicaremos artículos."
   },
   "hero": {
-    "badge": "Especialistas en Emprendedores",
-    "titleLine1": "Transformamos",
-    "titleLine2": "Ideas en Realidad",
+    "badge": "Desarrollo Web Profesional",
+    "titleLine1": "Construimos sitios",
+    "titleLine2": "que generan resultados",
     "titleAccent": "Digital",
-    "description": "Diseño web profesional, SEO y marketing digital con planes económicos diseñados específicamente para emprendedores y startups que buscan destacar en el mercado digital.",
+    "description": "Desarrollo web en React y WordPress, mantención técnica y asesoría IT para empresas y emprendedores que necesitan presencia digital seria.",
     "ctaServices": "Ver Servicios",
-    "ctaConsult": "Consulta Gratuita"
+    "ctaConsult": "Cotizar Proyecto"
   },
   "about": {
     "heading": "Quienes Somos",
